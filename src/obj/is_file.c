@@ -41,7 +41,7 @@ static void check_objdump(int fd, struct stat stats, char *path)
     if (new_buff->e_ident[EI_CLASS] == ELFCLASS64)
         start_objdump64(new_buff, path);
     else
-        objdump32(path);
+        start_objdump32((Elf32_Ehdr *)buff, path);
     return;
 }
 

@@ -15,7 +15,7 @@ static void start_checking(int ac, char **av)
     if (ac == 1) {
         is_file("a.out");
     } else {
-        for (int i = 0; i != ac; i++) {
+        for (int i = 1; i != ac; i++) {
             is_file(av[i]);
         }
     }
