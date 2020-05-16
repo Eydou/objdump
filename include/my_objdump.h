@@ -22,6 +22,8 @@
 #define D_PAGED         0x100
 
 void is_file(char *path);
+void is_space(unsigned int index);
+void is_space_hexa(unsigned int index);
 
 void start_objdump32(Elf32_Ehdr *buff, char *path);
 

@@ -8,7 +8,11 @@
 
 NM     =	src/nm/main.c
 
-OBJ     =	src/obj/main.c
+OBJ     =	src/obj/main.c			\
+			src/obj/is_file.c		\
+			src/obj/32/obj_32.c		\
+			src/obj/64/obj_64.c		\
+			src/obj/is_space.c
 
 OBJNM     =       $(NM:.c=.o)
 
@@ -18,7 +22,7 @@ NAME_NM    =	my_nm
 
 NAME_OBJ    =	my_objdump
 
-CC	=	gcc
+CC	=	gcc -I ./include
 
 FLAG	=	-W -I ./include
 
